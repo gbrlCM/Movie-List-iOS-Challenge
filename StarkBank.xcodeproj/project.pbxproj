@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5B9C53482887278F00543856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C53472887278F00543856 /* AppDelegate.swift */; };
-		5B9C534A2887278F00543856 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C53492887278F00543856 /* SceneDelegate.swift */; };
 		5B9C534C2887278F00543856 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C534B2887278F00543856 /* ViewController.swift */; };
-		5B9C534F2887278F00543856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9C534D2887278F00543856 /* Main.storyboard */; };
 		5B9C53512887279300543856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B9C53502887279300543856 /* Assets.xcassets */; };
 		5B9C53542887279300543856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9C53522887279300543856 /* LaunchScreen.storyboard */; };
 		5B9C535F2887279300543856 /* StarkBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C535E2887279300543856 /* StarkBankTests.swift */; };
 		5B9C53692887279300543856 /* StarkBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C53682887279300543856 /* StarkBankUITests.swift */; };
 		5B9C536B2887279300543856 /* StarkBankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C536A2887279300543856 /* StarkBankUITestsLaunchTests.swift */; };
+		5B9C537A28872AB400543856 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C537928872AB400543856 /* MovieListView.swift */; };
+		5B9C537E28872AED00543856 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C537D28872AED00543856 /* MovieListViewController.swift */; };
+		5B9C538028872AFB00543856 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C537F28872AFB00543856 /* MovieViewModel.swift */; };
+		5B9C53832887305B00543856 /* MovieListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C53822887305B00543856 /* MovieListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +40,7 @@
 /* Begin PBXFileReference section */
 		5B9C53442887278F00543856 /* StarkBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarkBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9C53472887278F00543856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B9C53492887278F00543856 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5B9C534B2887278F00543856 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5B9C534E2887278F00543856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B9C53502887279300543856 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B9C53532887279300543856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B9C53552887279300543856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,10 @@
 		5B9C53642887279300543856 /* StarkBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarkBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9C53682887279300543856 /* StarkBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarkBankUITests.swift; sourceTree = "<group>"; };
 		5B9C536A2887279300543856 /* StarkBankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarkBankUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5B9C537928872AB400543856 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
+		5B9C537D28872AED00543856 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		5B9C537F28872AFB00543856 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		5B9C53822887305B00543856 /* MovieListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,9 @@
 		5B9C53462887278F00543856 /* StarkBank */ = {
 			isa = PBXGroup;
 			children = (
+				5B9C537728872A8C00543856 /* MovieListFeature */,
 				5B9C53472887278F00543856 /* AppDelegate.swift */,
-				5B9C53492887278F00543856 /* SceneDelegate.swift */,
 				5B9C534B2887278F00543856 /* ViewController.swift */,
-				5B9C534D2887278F00543856 /* Main.storyboard */,
 				5B9C53502887279300543856 /* Assets.xcassets */,
 				5B9C53522887279300543856 /* LaunchScreen.storyboard */,
 				5B9C53552887279300543856 /* Info.plist */,
@@ -125,6 +128,49 @@
 				5B9C536A2887279300543856 /* StarkBankUITestsLaunchTests.swift */,
 			);
 			path = StarkBankUITests;
+			sourceTree = "<group>";
+		};
+		5B9C537728872A8C00543856 /* MovieListFeature */ = {
+			isa = PBXGroup;
+			children = (
+				5B9C53812887302B00543856 /* Data */,
+				5B9C537C28872ACC00543856 /* ViewModels */,
+				5B9C537B28872AC500543856 /* ViewControllers */,
+				5B9C537828872A9800543856 /* Views */,
+			);
+			path = MovieListFeature;
+			sourceTree = "<group>";
+		};
+		5B9C537828872A9800543856 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B9C537928872AB400543856 /* MovieListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B9C537B28872AC500543856 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B9C537D28872AED00543856 /* MovieListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5B9C537C28872ACC00543856 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5B9C537F28872AFB00543856 /* MovieViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5B9C53812887302B00543856 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5B9C53822887305B00543856 /* MovieListDataSource.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +279,6 @@
 			files = (
 				5B9C53542887279300543856 /* LaunchScreen.storyboard in Resources */,
 				5B9C53512887279300543856 /* Assets.xcassets in Resources */,
-				5B9C534F2887278F00543856 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B9C534C2887278F00543856 /* ViewController.swift in Sources */,
+				5B9C538028872AFB00543856 /* MovieViewModel.swift in Sources */,
 				5B9C53482887278F00543856 /* AppDelegate.swift in Sources */,
-				5B9C534A2887278F00543856 /* SceneDelegate.swift in Sources */,
+				5B9C53832887305B00543856 /* MovieListDataSource.swift in Sources */,
+				5B9C537A28872AB400543856 /* MovieListView.swift in Sources */,
+				5B9C537E28872AED00543856 /* MovieListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +345,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5B9C534D2887278F00543856 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B9C534E2887278F00543856 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5B9C53522887279300543856 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,9 +482,9 @@
 				INFOPLIST_FILE = StarkBank/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,9 +510,9 @@
 				INFOPLIST_FILE = StarkBank/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
